@@ -1,0 +1,66 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Recipe Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>🍽️ Recipe Finder</h1>
+      <ul>
+        <li><a href="#search">Search</a></li>
+        <li><a href="#planner">Meal Plan</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Search Section -->
+    <section id="search">
+      <h2>Find Your Recipe</h2>
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="e.g. chicken, pasta..." required />
+        <button type="submit">Search</button>
+      </form>
+      <div id="recipeResults" class="grid"></div>
+    </section>
+
+    <!-- Meal Planner Section -->
+    <section id="planner">
+      <h2>Your Meal Plan 🗓️</h2>
+      <ul id="mealList"></ul>
+      <button id="clearMeals">Clear Plan</button>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="formMsg"></p>
+    </section>
+  </main>
+
+  <!-- Modal for Recipe Details -->
+  <div id="recipeModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <img id="modalImage" src="" alt="" />
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
